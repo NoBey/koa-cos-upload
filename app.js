@@ -35,7 +35,7 @@ var storage = multer.diskStorage({
 //加载配置
 var upload = multer({storage});
 
-app.use(route.post('/profile', upload.single('avatar') ))
+app.use(route.post('/upload', upload.single('file') ))
 
 app.use(
   async (c, n) => {
